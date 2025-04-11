@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiemVzdGx1bWVuIiwiYSI6ImNtOWM0bjZ0NzBrNGwybHBiYWRwbTdmdG0ifQ.Luc6DCjTWp9S6Ez_qnaBBw';
 
