@@ -6,7 +6,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiemVzdGx1bWVuIiwiYSI6ImNtOWM0bjZ0NzBrNGwybHBiY
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v11',
-  center: [126.978, 37.5665],
+  center: [0, 0],
   zoom: 17,
   pitch: 60,
   bearing: -60,
@@ -61,7 +61,6 @@ function loadPipes(userLat, userLon) {
       console.log("현재위치: ", userLat,userLon);
 
       map.setCenter([userLon,userLat]);
-
       loadPipes(userLat,userLon);
     },
     (err) => {
@@ -69,4 +68,8 @@ function loadPipes(userLat, userLon) {
       console.log(err);
     }
   )
+
+new mapboxgl.Marker({ color: 'red' })
+  .setLngLat([userLon, userLat])
+  .addTo(map);
 
